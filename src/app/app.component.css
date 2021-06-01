@@ -1,0 +1,21 @@
+footer{
+
+    background-color: rgb(231, 231, 231);
+    
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+    
+    position:sticky;
+    top: 100%;
+    
+    
+    
+    
+    
+    }
+    
+    body{
+        min-height:100vh;
+        }

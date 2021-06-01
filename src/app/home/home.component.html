@@ -1,0 +1,77 @@
+<body>
+
+    <style>
+        .carousel-item {
+            height:32rem;
+            background-color: rgb(36, 35, 61);
+            color: white;
+            position:relative;
+            
+        }
+
+        .container{
+            position:absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            padding-bottom:50px;
+        }
+
+        .overlay-image{
+            position: absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            top:0;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.5;
+
+        }
+    </style>
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+    
+            <div class="carousel-item active" >
+                <div class="overlay-image" style="background-image: url(assets/slide1.jpg);"></div>
+                <div class="container">
+                    <h1> Example Headline </h1>
+
+                    <p>kweowei erweorwe weoreoids udhash asdasod asioejrnmd</p>
+             
+                    <a href="#" class="btn btn-lg btn-primary">Sign up</a>
+                </div>
+            </div>
+
+            <div class="carousel-item ">
+                <div class="container">
+                    <h1> Example Headline </h1>
+
+                    <p>kweowei erweorwe weoreoids udhash asdasod asioejrnmd</p>
+             
+                    <a class="btn">Sign up</a>
+                </div>
+            </div>
+    </div>
+
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+                <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+                <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+</div>
+</body>
