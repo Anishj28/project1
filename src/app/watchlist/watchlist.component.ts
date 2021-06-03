@@ -7,7 +7,8 @@ import { WatchService } from '../watch.service';
   styleUrls: ['./watchlist.component.css']
 })
 export class WatchlistComponent implements OnInit {
-  myMovies:any[]=[]
+  myMovies:any[]=[];
+  
   constructor(private W1:WatchService) { }
 
   ngOnInit(): void {
