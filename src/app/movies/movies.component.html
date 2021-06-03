@@ -1,1 +1,15 @@
-<p>movies works!</p>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <div class="col" *ngFor="let p of MovieList.items">
+          <div class="card">
+            <div class="card-header">{{p.rank}}</div>
+            <div class="card-body">
+              <img src="{{p.image}}" alt="">
+              <h3>{{p.title}}</h3>
+            </div> 
+            <button class="btn btn-secondary" (click)='sendInfo(p)'><i class="far fa-plus-square">ADD</i></button>
+          </div> 
+    </div>
+  </div>
+</div>

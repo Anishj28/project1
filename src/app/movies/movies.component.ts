@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviedataService } from '../moviedata.service';
+import { WatchService } from '../watch.service';
 
 @Component({
   selector: 'app-movies',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  MovieList:any;
+  constructor(private M1:MoviedataService,private W1:WatchService) { }
+  ngOnInit(): void 
+  {
+    console.log("ngOnint is called")
+    this.M1.getMovieData().subscribe(
+      data=>
+      {
+        this.MovieList=data;
+      },
+      err=>
+      {
+        console.log("Error occured ",err);
+      },
+    )
   }
-
+  sendInfo(p:any)
+  {
+    this.W1.WatchList.push(p);
+  }
 }
