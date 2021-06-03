@@ -10,6 +10,7 @@ import { WatchService } from '../watch.service';
 export class MoviesComponent implements OnInit {
 
   MovieList:any;
+  check:boolean=true;
   constructor(private M1:MoviedataService,private W1:WatchService) { }
   ngOnInit(): void 
   {
@@ -28,13 +29,14 @@ export class MoviesComponent implements OnInit {
   sendInfo(p:any,ind:any)
   {
     this.W1.WatchList.push(p);
+    this.check=false;
   }
   DelInfo(p:any)
   {
    let ind=this.W1.WatchList.indexOf(p);
    if(ind==-1)
    {
-     alert("YOU MUST ADD TO REMOVW IT");
+     alert("YOU MUST ADD TO REMOVE IT");
    }
    else
    {
