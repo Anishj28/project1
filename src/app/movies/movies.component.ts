@@ -10,6 +10,7 @@ import { WatchService } from '../watch.service';
 export class MoviesComponent implements OnInit {
 
   MovieList:any;
+  Toogle:boolean=true;
   constructor(private M1:MoviedataService,private W1:WatchService) { }
   ngOnInit(): void 
   {
@@ -28,5 +29,11 @@ export class MoviesComponent implements OnInit {
   sendInfo(p:any)
   {
     this.W1.WatchList.push(p);
+    this.Toogle=!this.Toogle;
+  }
+  DelInfo(ind:any)
+  {
+    this.W1.WatchList.slice(ind,1);
+    this.Toogle=!this.Toogle;
   }
 }
