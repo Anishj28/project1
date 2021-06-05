@@ -1,11 +1,13 @@
-
+<div>
+  <h2 class = "text-center heading">FEATURED MOVIES</h2>
+</div>
 <div class="container text-center mt-3">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
     <div class="col" *ngFor="let p of MovieList.items;let ind=index">
-          <div class="card bg-dark shadow">
+          <div class="card  shadow">
             <div class="card-header text-white">{{p.rank}}</div>
             <div class="card-body">
-              <img src="{{p.image}}" alt="" class="w-50">
+              <img src="{{p.image}}" alt="" class="w-75">
               <h6 class="text-white m-2">{{p.title}}</h6>
               <h6 class="text-white m-2"> Released in {{p.year}}</h6>
               <h6 class="text-white m-2">Crew : {{p.crew}}</h6>
