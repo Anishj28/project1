@@ -4,3 +4,19 @@ img
     display: block;
     margin: auto;
 }
+
+
+.card{
+
+    background-color: rgb(253, 119, 119);
+}
+
+img{
+
+    border: 25px solid;
+    border-color: rgb(107, 206, 132);
+}
+
+.heading{
+    font-family: 'Abel', sans-serif;
+}

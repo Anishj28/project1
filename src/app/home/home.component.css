@@ -1,0 +1,26 @@
+body{
+    min-height:100vh;
+    background-color: rgb(253, 119, 119);
+    }
+
+
+.heading{
+
+    background-color:rgb(255, 231, 124);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size:5.0rem;
+   
+}
+
+.heading2{
+
+    background-color:rgb(255, 231, 124);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.5rem;
+    padding:none !important;
+}
+
+.container{
+
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}

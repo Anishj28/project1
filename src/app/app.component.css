@@ -1,6 +1,6 @@
 footer{
 
-    background-color: rgb(231, 231, 231);
+    background-color:rgb(255, 194, 102);
     
     position: absolute;
     bottom: 0;
@@ -16,6 +16,19 @@ footer{
     
     }
     
-    body{
-        min-height:100vh;
-        }
+body{
+    min-height:100vh;
+    background-color: rgb(95, 168, 150);
+    }
+
+
+a{
+    font-family: 'Abel', sans-serif;
+}
+
+
+.navbar{
+
+    background-color:rgb(255, 231, 124);
+    color:rgb(0, 0, 0);
+}
