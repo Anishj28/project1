@@ -9,6 +9,14 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
 import { MoviesComponent } from './movies/movies.component';
 import { ShowsComponent } from './shows/shows.component';
 import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { SearchPipe } from './search.pipe';
+import { MoviefilterPipe } from './moviefilter.pipe';
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -18,14 +26,23 @@ import { FooterComponent } from './footer/footer.component';
     WatchlistComponent,
     MoviesComponent,
     ShowsComponent,
-    FooterComponent
+    FooterComponent,
+    SearchPipe,
+    MoviefilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
+    FormsModule,NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(library: FaIconLibrary){
+    library.addIconPacks(fas,far,fab);
+  }
+}

@@ -14,5 +14,10 @@ export class WatchlistComponent implements OnInit {
   ngOnInit(): void {
     this.myMovies=this.W1.WatchList;
   }
-
+  DelInfo(p:any)
+  {
+   let ind=this.W1.WatchList.indexOf(p);
+    this.W1.WatchList.splice(ind,1);
+  }
 }
+
