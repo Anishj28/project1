@@ -8,6 +8,6 @@ export class MoviedataService {
   constructor(private hc:HttpClient) { }
   getMovieData():Observable<any>
   {
-    return this.hc.get<any>("https://imdb-api.com/en/API/Top250Movies/k_pmitmdsh");
+    return this.hc.get<any>("https://imdb-api.com/en/API/Top250Movies/k_y4se40g3");
   }
 }

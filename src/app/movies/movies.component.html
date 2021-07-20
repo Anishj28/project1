@@ -1,23 +1,37 @@
-<div>
-  <h2 class = "text-center heading">FEATURED MOVIES</h2>
-</div>
-<div class="container text-center mt-3">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
-    <div class="col" *ngFor="let p of MovieList.items;let ind=index">
-          <div class="card  shadow">
-            <div class="card-header text-white">{{p.rank}}</div>
-            <div class="card-body">
-              <img src="{{p.image}}" alt="" class="w-75">
-              <h6 class="text-white m-2">{{p.title}}</h6>
+<div class="row d-flex">
+  <div class="col-2 col-sm-3 col-md-4"></div>
+  <div class="col-8 col-sm-6 col-md-4">
+    <form class="d-flex display-column m-5" #ref="ngForm" >
+        <input type="text" name="Name" placeholder="search by name" class="form-control" id="id1" [(ngModel)]='searchTerm'>
+        <button class="btn btn-success float-end" type="submit">search</button>
+    </form>
+  </div>
+  </div>
+  <div class="container text-center">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+      <div class="col" *ngFor="let p of MovieList | paginate:{ itemsPerPage: 6,currentPage: page,totalItems:totalLength} | search: searchTerm">
+        <div class="card">
+          <div class="card-header text-white">{{p.rank}}</div>
+          <div class="card-body text-white">
+            <img src="{{p.image}}" alt="" class="w-75">
+            <h3 class="text-white mt-2">{{p.title}}</h3>
+            <hr>
+            
               <h6 class="text-white m-2"> Released in {{p.year}}</h6>
               <h6 class="text-white m-2">Crew : {{p.crew}}</h6>
               <h6 class="text-white m-2">Rating :{{p.imDbRating}}</h6>
+          </div> 
+      
+            <div *ngIf="checkMovie(p)">
+              <button class="btn btn-primary m-2" (click)='sendInfo(p)'>ADD</button> 
             </div>
-            <div class="d-flex flex-row justify-content-around">
-              <div *ngIf="check==true"><button class="btn btn-secondary m-2" (click)='sendInfo(p)'>ADD</button></div>
-              <div *ngIf="check==false"><button class="btn btn-secondary m-2" (click)='DelInfo(p)'>REMOVE</button></div>
-          </div> 
-          </div> 
+            <div *ngIf="!checkMovie(p)">
+              <button class="btn btn-danger m-2" (click)='DelInfo(p)'>REMOVE</button>
+            </div>
+        </div>
+        </div> 
+    </div>
+    <div class="Page">
+         <pagination-controls (pageChange)="page = $event"></pagination-controls>
     </div>
   </div>
-</div>

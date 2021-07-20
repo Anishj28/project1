@@ -1,0 +1,24 @@
+img
+{
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+
+.card{
+
+    background-color: rgb(253, 119, 119);
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    font-weight: bold;
+}
+
+h3{
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    font-weight: bold;
+}
+img{
+
+    border: 25px solid;
+    border-color: rgb(107, 206, 132);
+}

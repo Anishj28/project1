@@ -9,6 +9,8 @@ img
 .card{
 
     background-color: rgb(253, 119, 119);
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+    font-weight: bold;
 }
 
 img{
@@ -18,5 +20,5 @@ img{
 }
 
 .heading{
-    font-family: 'Abel', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }

@@ -1,11 +1,39 @@
 h1{
     color:rgb(0, 0, 0);
     text-align:center;
-    font-size:20px;
+    font-size: 2rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
 }
 
 
 div{
 
     background-color:rgb(255, 231, 124);
+}
+
+fa-icon{
+
+    padding: 0.9rem;
+}
+
+.end{
+
+    font-size: .7rem;
+    margin-top: 50px;
+}
+
+ul{ 
+  padding-top:10px;
+  list-style-type: none;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-style:bolder;
+  color:black;
+}
+
+.top{
+
+    font-size:1.2rem;
+    padding-bottom: 15px
+
 }
